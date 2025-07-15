@@ -1,0 +1,250 @@
+/* Base styles */
+:root {
+  --primary: #2563eb; /* Modern blue */
+  --secondary: #e6f0fa; /* Light blue background */
+  --accent: #60a5fa; /* Accent blue */
+  --text: #1a237e; /* Deep blue for text */
+  --bg: #fff;
+  --muted: #f5faff; /* Very light blue/white */
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #e6f0fa 0%, #f5faff 100%);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+.container {
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+.hero {
+  background: var(--secondary);
+  padding: 3rem 0 2rem 0;
+  text-align: center;
+  border-radius: 0 0 2rem 2rem;
+  box-shadow: 0 4px 24px rgba(37,99,235,0.07);
+  position: relative;
+  overflow: hidden;
+}
+.hero h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+  letter-spacing: -1px;
+}
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+.cta-btn {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(37,99,235,0.10);
+}
+.cta-btn:hover, .cta-btn:focus-visible {
+  background: #1746a0;
+  transform: scale(1.04);
+  box-shadow: 0 4px 16px rgba(37,99,235,0.18);
+  outline: none;
+}
+.about-medicare, .value-care, .why-value-care, .get-right-care, .how-it-works {
+  background: var(--muted);
+  margin-top: 1rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 24px rgba(37,99,235,0.07);
+  padding-bottom: 1rem;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.about-medicare:hover, .about-medicare:focus-within,
+.value-care:hover, .value-care:focus-within,
+.why-value-care:hover, .why-value-care:focus-within,
+.get-right-care:hover, .get-right-care:focus-within,
+.how-it-works:hover, .how-it-works:focus-within {
+  box-shadow: 0 8px 32px rgba(37,99,235,0.13);
+  transform: translateY(-2px) scale(1.01);
+}
+.about-medicare h2, .value-care h2, .why-value-care h2, .get-right-care h2, .how-it-works h2, .lead-form-section h2 {
+  color: var(--primary);
+  margin-top: 0;
+}
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 2rem 0 1rem 0;
+}
+.step {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: transform 0.18s, box-shadow 0.18s;
+  border-radius: 1rem;
+  padding: 0.5rem 0.5rem 0.5rem 0;
+}
+.step:hover .icon, .step:focus-within .icon {
+  transform: scale(1.08) rotate(-2deg);
+  box-shadow: 0 2px 12px rgba(37,99,235,0.13);
+  background: linear-gradient(135deg, #e6f0fa 60%, #60a5fa 100%);
+}
+.step .icon {
+  width: 48px;
+  height: 48px;
+  background: var(--secondary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba(37,99,235,0.07);
+}
+.testimonial {
+  font-style: italic;
+  color: #3b3b5c;
+  margin: 1.5rem 0 0 0;
+  border-left: 4px solid var(--primary);
+  padding-left: 1rem;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(37,99,235,0.06);
+  transition: box-shadow 0.2s;
+}
+.testimonial:hover, .testimonial:focus-visible {
+  box-shadow: 0 4px 16px rgba(37,99,235,0.13);
+}
+.lead-form-section form {
+  background: rgba(255,255,255,0.92);
+  padding: 2rem 1rem 1rem 1rem;
+  border-radius: 2rem;
+  box-shadow: 0 4px 24px rgba(37,99,235,0.13);
+  margin-bottom: 1rem;
+  backdrop-filter: blur(2px);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.lead-form-section form:hover, .lead-form-section form:focus-within {
+  box-shadow: 0 8px 32px rgba(37,99,235,0.18);
+  transform: scale(1.01);
+}
+.lead-form-section label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+.lead-form-section input, .lead-form-section select {
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  border: 1.5px solid #b6c6e3;
+  border-radius: 1rem;
+  font-size: 1rem;
+  background: #f5faff;
+  transition: border 0.2s, box-shadow 0.2s, background 0.2s;
+}
+.lead-form-section input:focus, .lead-form-section select:focus {
+  border: 2px solid var(--primary);
+  background: #fff;
+  outline: none;
+  box-shadow: 0 0 0 2px #e6f0fa;
+}
+.lead-form-section input:hover, .lead-form-section select:hover {
+  border: 2px solid var(--accent);
+  background: #e6f0fa;
+}
+.lead-form-section button[type="submit"] {
+  width: 100%;
+  background: var(--primary);
+  color: #fff;
+  padding: 1rem;
+  border: none;
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(37,99,235,0.10);
+}
+.lead-form-section button[type="submit"]:hover, .lead-form-section button[type="submit"]:focus-visible {
+  background: #1746a0;
+  transform: scale(1.03);
+  box-shadow: 0 4px 16px rgba(37,99,235,0.18);
+  outline: none;
+}
+.input-error {
+  border: 2px solid #b00020 !important;
+  background: #fff0f0 !important;
+}
+.tcpa {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 1rem 0 0.5rem 0;
+}
+.tcpa-logo-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin: 1rem 0 0.5rem 0;
+}
+.oak-logo {
+  width: 80px;
+  height: auto;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 4px rgba(37,99,235,0.07);
+}
+.logo {
+  text-align: center;
+  margin: 1.5rem 0 0 0;
+}
+footer {
+  background: var(--secondary);
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.95rem;
+  color: #3b3b5c;
+  margin-top: 2rem;
+  border-radius: 2rem 2rem 0 0;
+  box-shadow: 0 -2px 8px rgba(37,99,235,0.04);
+}
+@media (min-width: 700px) {
+  .container {
+    max-width: 800px;
+  }
+  .steps {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .step {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+  }
+}
+@media (max-width: 500px) {
+  .tcpa-logo-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .oak-logo {
+    margin-bottom: 0.5rem;
+  }
+}
+:focus-visible {
+  outline: 2.5px solid var(--accent);
+  outline-offset: 2px;
+} 
